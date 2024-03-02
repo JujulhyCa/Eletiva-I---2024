@@ -8,8 +8,12 @@
         <p>Hello, World!</p>
         <input type="text" id="valor">
         <button id="enviar">Enviar</button>
+        <div id="conteudo"></div>
 
         <script>
+            document.querySelector("#enviar")
+            .addEventListener("click", mudarValor)
+
             function mudarValor(){
                 document.querySelector("#valor") .value = "Novo conteúdo"
                 if (document.getElementById("conteudo").innerHTML == 
