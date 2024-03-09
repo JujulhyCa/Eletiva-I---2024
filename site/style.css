@@ -43,6 +43,7 @@ nav a {
 
 #menu li a{
     padding: 1em;
+    display: block;
 }
 
 #listras{
