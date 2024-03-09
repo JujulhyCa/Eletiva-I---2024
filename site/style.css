@@ -70,3 +70,13 @@ nav a {
 .submenu-active .subitem{
     display: block;
 }
+
+.tem-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.75em;
+    line-height: 1em;
+    font-weight: 900;
+    content: "\f078";
+    color: #fff;
+    padding-left: 0.3125em;
+}
