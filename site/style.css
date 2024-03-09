@@ -22,3 +22,25 @@ nav a {
     list-style-type: none;
 }
 
+#logo{
+    font-size: 1.25em;
+}
+
+.item.button:hover{
+    background-color: dodgerblue;
+}
+
+.item:not(.button) a:hover {
+    color: darkslategrey;
+}
+
+#menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+} 
+
+#menu li a{
+    padding: 1em;
+}
