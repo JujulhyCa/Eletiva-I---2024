@@ -66,3 +66,7 @@ nav a {
 .subitem{
     display: none;
 }
+
+.submenu-active .submenu{
+    display: block;
+}
