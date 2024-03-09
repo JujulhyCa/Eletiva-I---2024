@@ -67,6 +67,6 @@ nav a {
     display: none;
 }
 
-.submenu-active .submenu{
+.submenu-active .subitem{
     display: block;
 }
