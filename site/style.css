@@ -65,11 +65,15 @@ nav a {
     display: block;
 }
 
-.subitem{
+.submenu{
     display: none;
 }
 
-.submenu-active .subitem{
+.submenu-active{
+    background-color: #111;
+}
+
+.submenu-active .submenu{
     display: block;
 }
 
@@ -81,4 +85,33 @@ nav a {
     content: "\f078";
     color: #fff;
     padding-left: 0.3125em;
+}
+
+@media all and (min-width: 960px){
+
+    #menu {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    #logo{
+        order: 0;
+    }
+
+    .button{
+        order: 2;
+    }
+
+    #listras{
+        display: none;
+    }
+    .item{
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+
 }
