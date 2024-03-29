@@ -235,3 +235,116 @@ img {
 .groceries__input {
     margin-left: 20px; /* Adiciona um espaçamento entre o ícone e o input */
 }
+
+@media only screen and (min-width: 768px)
+.landing-v2-header__sing-in, .landing-v2-header__sing-up {
+    height: 44px;
+}
+.landing-v2-header__sing-in, .landing-v2-header__sing-up {
+    height: 34px;
+    border-radius: 6px;
+    padding: 0;
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+.btn--default {
+    background: #ea1d2c;
+    color: #fff;
+}
+@media only screen and (min-width: 960px)
+.btn {
+    cursor: pointer;
+}
+.btn {
+    background: transparent;
+    text-decoration: none;
+    color: #ea1d2c;
+    border: none;
+    padding: 0 20px;
+    border-radius: 4px;
+    margin: 3px 0;
+    height: 50px;
+    font-weight: 500;
+    transition: .1s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+a, button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+button {
+    appearance: auto;
+    text-rendering: auto;
+    color:#5c3131;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: f#111;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+body {
+    font-family: iFood RC Textos, helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    height: 100%;
+    scroll-behavior: auto;
+}
+Atributo style {
+    --screen-x: 992px;
+    --screen-y: 654px;
+}
+:root {
+    --swiper-navigation-size: 44px;
+}
+:root {
+    --swiper-theme-color: #007aff;
+}
+html {
+    text-rendering: optimizelegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    color: #fff;
+    background: #ea1d2c;
+}
