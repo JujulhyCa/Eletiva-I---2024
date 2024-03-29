@@ -4,30 +4,6 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-header nav ul li {
-    flex-grow: 1;
-}
-
-header nav ul li a {
-    display: block;
-    padding: 20px;
-    text-align: center;
-    color: #757474;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-header nav ul li a:hover {
-    background-color: #e55d00;
-}
 
 
 *{                  /* para todos os elementos */
@@ -236,8 +212,8 @@ img {
     margin-left: 20px; /* Adiciona um espaçamento entre o ícone e o input */
 }
 
-@media only screen and (min-width: 768px)
-.landing-v2-header__sing-in, .landing-v2-header__sing-up {
+@media only screen and (min-width: 768px){
+    .landing-v2-header__sing-in, .landing-v2-header__sing-up {
     height: 44px;
 }
 .landing-v2-header__sing-in, .landing-v2-header__sing-up {
@@ -245,16 +221,16 @@ img {
     border-radius: 6px;
     padding: 0;
 }
-[type=button], [type=reset], [type=submit], button {
-    -webkit-appearance: button;
-}
+
 .btn--default {
     background: #ea1d2c;
     color: #fff;
 }
-@media only screen and (min-width: 960px)
+
+@media only screen and (min-width: 960px){
 .btn {
     cursor: pointer;
+}
 }
 .btn {
     background: transparent;
@@ -324,7 +300,7 @@ body {
     height: 100%;
     scroll-behavior: auto;
 }
-Atributo style {
+style {
     --screen-x: 992px;
     --screen-y: 654px;
 }
@@ -344,7 +320,9 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
+
 ::selection {
     color: #fff;
     background: #ea1d2c;
+}
 }
