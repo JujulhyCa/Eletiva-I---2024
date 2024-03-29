@@ -53,6 +53,11 @@ nav a {
     text-decoration: none;
 }
 
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
 img {
     width: 100px; /* Ajuste o tamanho conforme necessário */
     height: auto;
@@ -174,11 +179,12 @@ img {
     margin: 0 auto;
     position: relative;
 }
+    
 ::selection {
     color: #fff;
-    background: #9c8b8c;
-    background-color: #740b0b;
-    }    
+    background: #ea1d2c;
+}
+
 .groceries {   /*landing-groceries-header*/
         display: flex;
         flex-direction: column;
@@ -205,7 +211,13 @@ img {
     z-index: 9997;
 }
 
-
+.landing-v2-header__container {
+    grid-template-columns: 88px 1fr 114px 104px;
+    padding: 40px 32px;
+    grid-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+}
 
 .groceries__container {
     display: flex;
