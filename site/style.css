@@ -44,7 +44,7 @@ body{
 }
 
 nav {
-    background-color: #b42e2e;
+    background-color: #a5a4a4;
 }
 
 nav a {
@@ -162,7 +162,7 @@ img {
 
 ::selection {
     color: #fff;
-    background: #ea1d2c;
+    background: #9c8b8c;
     }    
 .groceries {   /*landing-groceries-header*/
         display: flex;
@@ -204,3 +204,20 @@ img {
     font-size: 18px;
     color: #666;
 }
+
+.groceries__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Torna o .groceries__container como um container posicional */
+}
+
+.groceries__icon {
+    position: absolute; /* Posicionamento absoluto para o ícone */
+    left: 10px; /* Posiciona o ícone 10px à esquerda */
+}
+
+.groceries__input {
+    margin-left: 20px; /* Adiciona um espaçamento entre o ícone e o input */
+}
+
