@@ -20,10 +20,8 @@ header nav ul li a {
     display: block;
     padding: 20px;
     text-align: center;
-    color: #fff;
+    color: #757474;
     text-decoration: none;
-    background-color: #ff6600;
-    border: 1px solid #ff6600;
     border-radius: 5px;
 }
 
@@ -44,11 +42,11 @@ body{
 }
 
 nav {
-    background-color: #a5a4a4;
+    background-color: #e0dfdf;
 }
 
 nav a {
-    color: #fff;
+    color: #5c3131;
     text-decoration: none;
 }
 
@@ -67,7 +65,7 @@ img {
 }
 
 .item.button:hover{
-    background-color: dodgerblue;
+    background-color: rgb(240, 43, 43);
 }
 
 .item:not(.button) a:hover {
@@ -163,6 +161,7 @@ img {
 ::selection {
     color: #fff;
     background: #9c8b8c;
+    background-color: #740b0b;
     }    
 .groceries {   /*landing-groceries-header*/
         display: flex;
@@ -210,6 +209,7 @@ img {
     justify-content: center;
     align-items: center;
     position: relative; /* Torna o .groceries__container como um container posicional */
+    
 }
 
 .groceries__icon {
@@ -221,3 +221,16 @@ img {
     margin-left: 20px; /* Adiciona um espaçamento entre o ícone e o input */
 }
 
+.groceries__form{
+
+}
+
+.groceries__input-wrapper 
+
+.groceries__field
+                
+.icon-marmita icon-marmita--search groceries__search-icon
+
+#fundo{
+    background-color:#9c8b8c;
+}
