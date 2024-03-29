@@ -1,4 +1,9 @@
 
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
 *{                  /* para todos os elementos */
     padding: 0;
     margin: 0;
@@ -147,3 +152,13 @@ img {
         aspect-ratio: 2;
     }
 }
+
+.landing-v2-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f7f7f7;
+    z-index: 9997;
+}
+
