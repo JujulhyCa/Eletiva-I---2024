@@ -127,6 +127,10 @@ img {
         background-color: #111;
     }
 
+::selection {
+    color: #fff;
+    background: #ea1d2c;
+    }    
 .groceries {   /*landing-groceries-header*/
         display: flex;
         flex-direction: column;
