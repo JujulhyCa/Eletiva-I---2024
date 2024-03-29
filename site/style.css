@@ -37,8 +37,11 @@ header nav ul li a:hover {
 }
 
 body{
-    font-family: sans-serif;
-    font-size: 1em;
+    font-family: iFood RC Textos, helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    height: 100%;
+    scroll-behavior: auto;
 }
 
 nav {
@@ -69,7 +72,7 @@ img {
 }
 
 .item:not(.button) a:hover {
-    color: darkslategrey;
+    color: rgb(238, 104, 86);
 }
 
 #menu{
@@ -77,6 +80,7 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+    height: 150px;
 } 
 
 #menu li a{
@@ -158,6 +162,18 @@ img {
         background-color: #111;
     }
 
+.landing-v2-header__container {
+    display: grid;
+    grid-template-columns: 40px 1fr 88px;
+    padding: 20px 16px;
+    grid-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+    align-items: center;
+    max-width: 1278px !important;
+    margin: 0 auto;
+    position: relative;
+}
 ::selection {
     color: #fff;
     background: #9c8b8c;
@@ -170,7 +186,7 @@ img {
         justify-content: flex-end;
         text-align: center;
         width: 100%;
-        margin-top: 80px;
+        margin-top: 0;
         padding: 56px 0 136px;
         background-image: url(https://static.ifood-static.com.br/image/upload/t_banner/webapp/landing/groceries-background-mobile.png);
         background-repeat: no-repeat;
@@ -189,20 +205,7 @@ img {
     z-index: 9997;
 }
 
-#intro {
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 50px 0;
-}
 
-#intro h2 {
-    margin-bottom: 20px;
-}
-
-#intro p {
-    font-size: 18px;
-    color: #666;
-}
 
 .groceries__container {
     display: flex;
@@ -220,13 +223,3 @@ img {
 .groceries__input {
     margin-left: 20px; /* Adiciona um espaçamento entre o ícone e o input */
 }
-
-.groceries__form{
-
-}
-
-.groceries__input-wrapper 
-
-.groceries__field
-                
-.icon-marmita icon-marmita--search groceries__search-icon
