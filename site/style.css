@@ -224,53 +224,67 @@ form {
     column-gap: 20px;
 }
 
-.search-container {
+/*.search-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff; /* Cor de fundo */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
+    background-color: #fff; /* Cor de fundo 
+    padding: 10px 20px; /* Espaçamento interno 
+    border: 1px solid #ccc; /* Borda 
+    border-radius: 5px; /* Borda arredondada 
 }
 
 .address-input {
-    flex: 1; /* Ocupa todo o espaço disponível */
-    padding: 8px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
+    flex: 1; /* Ocupa todo o espaço disponível 
+    padding: 8px; /* Espaçamento interno 
+    border: 1px solid #ccc; /* Borda 
+    border-radius: 5px; /* Borda arredondada 
 }
 
 .search-button {
-    background-color: #ff3d00; /* Cor de fundo vermelha */
-    color: #fff; /* Cor do texto branco */
-    padding: 8px 20px; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Altera o cursor ao passar por cima */
+    background-color: #ff3d00; /* Cor de fundo vermelha 
+    color: #fff; /* Cor do texto branco 
+    padding: 8px 20px; /* Espaçamento interno 
+    border: none; /* Remove a borda 
+    border-radius: 5px; /* Borda arredondada 
+    cursor: pointer; /* Altera o cursor ao passar por cima 
 }
 
 .search-button:hover {
-    background-color: #ff5a36; /* Cor de fundo vermelha mais escura ao passar por cima */
-}
+    background-color: #ff5a36; /* Cor de fundo vermelha mais escura ao passar por cima 
+}*/
 
 
-/*.groceries__container {
+.groceries__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Torna o .groceries__container como um container posicional
+    position: relative; /* Torna o .groceries__container como um container */
     
 }
 
 .groceries__icon {
-    position: absolute; /* Posicionamento absoluto para o ícone */
-    left: 10px; /* Posiciona o ícone 10px à esquerda 
+    position: absolute; /* Posicionamento absoluto para o ícone*/
+    left: 10px; /*Posiciona o ícone 10px à esquerda */
 }
 
 .groceries__input {
-    margin-left: 20px; /* Adiciona um espaçamento entre o ícone e o input
-}*/
+    margin-left: 20px; /* Adiciona um espaçamento entre o ícone e o input*/
+}
+
+.groceries__button {
+    cursor: pointer;
+    background-color: #ea1d2c;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.groceries__field {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+}
 
 @media only screen and (min-width: 768px){
     .landing-v2-header__sing-in, .landing-v2-header__sing-up {
