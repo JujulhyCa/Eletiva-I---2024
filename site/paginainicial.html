@@ -8,6 +8,35 @@
 
     <style>
         /* CSS */
+        html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+*{                  /* para todos os elementos */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: iFood RC Textos, helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    height: 100%;
+    scroll-behavior: auto;
+}
+
+nav {
+    background-color: #e0dfdf;
+}
+
+nav a {
+    color: #5c3131;
+    text-decoration: none;
+}
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,12 +45,13 @@
 
         /* Estilos do cabeçalho */
         nav {
-            background-color: #ff5a00;
+            background-color: #e0dfdf;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 20px; /* Ajustado o preenchimento */
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionado sombra */
         }
 
         #menu {
@@ -198,18 +228,38 @@
 
     <script>
         // JavaScript
-        const menuIcon = document.getElementById('listras');
-        const menu = document.getElementById('menu');
+        const listras = document.querySelector("#listras");
+        const menu = document.querySelector("#menu");
+        const itens = document.querySelectorAll(".item");
 
-        menuIcon.addEventListener('click', function() {
-            menu.classList.toggle('show-menu');
-        });
-
-        document.addEventListener('click', function(event) {
-            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
-                menu.classList.remove('show-menu');
+        function abrirMenu(){
+            if (menu.classList.contains("active")){
+                menu.classList.remove("active");
+                listras.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+            } else{
+                menu.classList.add("active");
+                listras.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
             }
-        });
+        }
+
+        listras.addEventListener("click", abrirMenu);
+
+        function abrirSubMenu(){
+            if (this.classList.contains("submenu-active")){
+                this.classList.remove("submenu-active");
+            } else if (menu.querySelector(".submenu-active")){
+                menu.querySelector(".submenu-active").classList.remove("submenu-active");
+                this.classList.add("submenu-active");
+            } else{
+                this.classList.add("submenu-active");
+            }
+        }
+
+        for (let item of itens){
+            if (item.querySelector(".submenu")){
+                item.addEventListener("click", abrirSubMenu);
+            }
+        }
     </script>
 </body>
 </html>
