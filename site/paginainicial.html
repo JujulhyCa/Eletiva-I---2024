@@ -1,13 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-        <title>Clone iFood</title>
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Clone iFood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos do cabeçalho */
+        nav {
+            background-color: #ff5a00;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #menu li {
+            margin-right: 20px;
+        }
+
+        #menu li:last-child {
+            margin-right: 0;
+        }
+
+        #listras {
+            display: none; /* Esconde o ícone do menu em telas maiores */
+        }
+
+        /* Estilos do conteúdo principal */
+        .groceries {
+            background-color: #f7f7f7;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .groceries__title {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .groceries__descricao {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* Estilos das tags de categorias */
+        .groceries__tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .groceries__tag-wrapper {
+            margin: 5px;
+        }
+
+        .groceries__tag {
+            background-color: #ff5a00;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .groceries__tag:hover {
+            background-color: #ff7c4d;
+        }
+
+        /* Estilos do formulário */
+        .groceries__input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 60%;
+        }
+
+        .groceries__button {
+            background-color: #ff5a00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .groceries__button:hover {
+            background-color: #ff7c4d;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -32,7 +134,7 @@
                         iFood Card</a>
                 </li>
 
-                 <li class="item"><a href="https://www.ifood.com.br/entrar">
+                <li class="item"><a href="https://www.ifood.com.br/entrar">
                     <button type="button" role="button" class="btn btn--link btn--size-m landing-v2-header__sing-up" label="Criar conta" theme="link" variant="landing-v2-header__sing-up" color="primary" target="" rel="">
                         <span class="btn__label">Criar conta</span>
                     </button>
@@ -50,49 +152,64 @@
             </ul>
         </nav>
     </div>
-        <div class="groceries">
-                    <div class="container">
-                        <h1 class="groceries__title groceries__text">Faça mercado no iFood</h1>
-                        <p class="groceries__descricao groceries__text">Entregamos tudo o que precisa na porta da sua casa, de hortifruti a itens de limpeza</p>
-                    </div>
+    <div class="groceries">
+        <div class="container">
+            <h1 class="groceries__title groceries__text">Faça mercado no iFood</h1>
+            <p class="groceries__descricao groceries__text">Entregamos tudo o que precisa na porta da sua casa, de hortifruti a itens de limpeza</p>
         </div>
-            <form class="groceries__form"><div class="groceries__input-wrapper groceries__field">
-                <span class="icon-marmita icon-marmita--search groceries__search-icon">
-                    <svg width="48px" height="48px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    </div>
+    <form class="groceries__form">
+        <div class="groceries__input-wrapper groceries__field">
+            <span class="icon-marmita icon-marmita--search groceries__search-icon">
+                <svg width="48px" height="48px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-432.000000, -1296.000000)" fill="#3F3E3E">
                             <g transform="translate(47.000000, 1227.000000)">
                                 <g transform="translate(385.000000, 69.000000)">
-                                    <path d="M22,37 C30.2842712,37 37,30.2842712 37,22 C37,13.7157288 30.2842712,7 22,7 C13.7157288,7 7,13.7157288 7,22 C7,30.2842712 13.7157288,37 22,37 Z M22,40 C12.0588745,40 4,31.9411255 4,22 C4,12.0588745 12.0588745,4 22,4 C31.9411255,4 40,12.0588745 40,22 C40,31.9411255 31.9411255,40 22,40 Z" fill-rule="nonzero">
-
-                                    </path>
-                                    <rect transform="translate(37.792893, 38.292893) rotate(-45.000000) translate(-37.792893, -38.292893) " x="36.2928932" y="32.2928932" width="3" height="12" rx="1.5">
-                                        
-                                    </rect></g></g></g></g>
-                    </svg>
-                </span>
-
-                <div class="groceries__container">
-                    <span class="groceries__icon"></span>
-                    <input class="groceries__input" placeholder="Em qual endereço você está?">
-                    <button type="submit" class="groceries__button groceries__field">Ver mercados próximos</button>
-                </div>
-            </form>
-            
-            <div class="groceries__tags">
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Frios</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Laticínios</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Feira</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Bebidas</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Doces</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Massas frescas</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Limpeza</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Padaria</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Higiene</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Congelados</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Carnes</h2></button>
-                <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Cerveja</h2></button>
+                                    <path d="M22,37 C30.2842712,37 37,30.2842712 37,22 C37,13.7157288 30.2842712,7 22,7 C13.7157288,7 7,13.7157288 7,22 C7,30.2842712 13.7157288,37 22,37 Z M22,40 C12.0588745,40 4,31.9411255 4,22 C4,12.0588745 12.0588745,4 22,4 C31.9411255,4 40,12.0588745 40,22 C40,31.9411255 31.9411255,40 22,40 Z" fill-rule="nonzero"></path>
+                                    <rect transform="translate(37.792893, 38.292893) rotate(-45.000000) translate(-37.792893, -38.292893) " x="36.2928932" y="32.2928932" width="3" height="12" rx="1.5"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+            <div class="groceries__container">
+                <span class="groceries__icon"></span>
+                <input class="groceries__input" placeholder="Em qual endereço você está?">
+                <button type="submit" class="groceries__button groceries__field">Ver mercados próximos</button>
             </div>
-            </div>
+        </div>
+    </form>
+    <div class="groceries__tags">
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Frios</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Laticínios</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Feira</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Bebidas</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Doces</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Massas frescas</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Limpeza</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Padaria</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Higiene</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Congelados</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Carnes</h2></button>
+        <button class="groceries__tag-wrapper"><h2 class="groceries__tag">Cerveja</h2></button>
     </div>
 
+    <script>
+        // JavaScript
+        const menuIcon = document.getElementById('listras');
+        const menu = document.getElementById('menu');
+
+        menuIcon.addEventListener('click', function() {
+            menu.classList.toggle('show-menu');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove('show-menu');
+            }
+        });
+    </script>
+</body>
+</html>
