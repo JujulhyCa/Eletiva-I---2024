@@ -1,44 +1,81 @@
-<!-- 6. Faça um algoritmo PHP que receba os valores A e B, imprima-os em ordem crescente em relação aos 
-seus valores. Caso os valores sejam iguais, informar o usuário e imprimir o valor em tela apenas uma 
-vez.
-Exemplo, para A=5, B=4 você deve imprimir na tela: "4 5".
- para A=5, B=5 você deve imprimir na tela: “Números iguais: 5”-->
+<!-- 6. Faça um programa que receba o nome de 5 produtos e seus respectivos preços, 
+calcule e mostre: 
+a. A quantidade de produtos com preço inferior a R$50,00. 
+b. O nome dos produtos com preço entre R$50,00 e R$100,00. 
+c. A média dos preços dos produtos com preço superior a R$100,00. -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordem Crescente</title>
+    <title>Análise de Produtos</title>
 </head>
 <body>
-    <h2>Ordem Crescente</h2>
-    <form method="post">
-        <label>Digite o valor de A:</label>
-        <input type="number" name="valorA"><br>
-        <label>Digite o valor de B:</label>
-        <input type="number" name="valorB"><br>
-        <button type="submit">Ordenar</button>
-    </form>
+    <h2>Análise de Produtos</h2>
+    <form action="" method="post">
+        <?php
+            // Definindo arrays para armazenar nomes e preços dos produtos
+            $nomes_produtos = [];
+            $precos_produtos = [];
 
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Obter os valores digitados pelo usuário
-        $valorA = $_POST["valorA"];
-        $valorB = $_POST["valorB"];
+            // Processamento dos dados do formulário
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // Recebendo e armazenando nomes e preços dos produtos
+                for ($i = 1; $i <= 5; $i++) {
+                    $nome_produto = $_POST["nome_produto_$i"];
+                    $preco_produto = $_POST["preco_produto_$i"];
 
-        // Verificar se os valores são iguais
-        if ($valorA == $valorB) {
-            echo "<p>Números iguais: $valorA</p>";
-        } else {
-            // Ordenar os valores em ordem crescente
-            if ($valorA < $valorB) {
-                echo "<p>$valorA $valorB</p>";
-            } else {
-                echo "<p>$valorB $valorA</p>";
+                    // Adicionando os nomes e preços dos produtos aos arrays correspondentes
+                    $nomes_produtos[] = $nome_produto;
+                    $precos_produtos[] = $preco_produto;
+                }
+
+                // Inicializando variáveis para armazenar resultados
+                $quantidade_preco_inferior_50 = 0;
+                $nomes_preco_entre_50_e_100 = [];
+                $soma_precos_superior_100 = 0;
+                $quantidade_precos_superior_100 = 0;
+
+                // Calculando resultados
+                foreach ($precos_produtos as $indice => $preco) {
+                    if ($preco < 50) {
+                        $quantidade_preco_inferior_50++;
+                    } elseif ($preco >= 50 && $preco <= 100) {
+                        $nomes_preco_entre_50_e_100[] = $nomes_produtos[$indice];
+                    } elseif ($preco > 100) {
+                        $soma_precos_superior_100 += $preco;
+                        $quantidade_precos_superior_100++;
+                    }
+                }
+
+                // Calculando média dos preços dos produtos com preço superior a R$100,00
+                $media_precos_superior_100 = $quantidade_precos_superior_100 > 0 ? $soma_precos_superior_100 / $quantidade_precos_superior_100 : 0;
             }
-        }
-    }
-    ?>
+
+            // Exibindo campos para entrada de nomes e preços dos produtos
+            for ($i = 1; $i <= 5; $i++) {
+                echo "Produto $i:<br>";
+                echo "Nome: <input type='text' name='nome_produto_$i' required><br>";
+                echo "Preço: R$ <input type='number' name='preco_produto_$i' step='0.01' min='0' required><br><br>";
+            }
+            ?>
+            <input type="submit" value="Calcular">
+        </form>
+
+        <?php
+            // Exibindo os resultados
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                echo "<h3>Resultados:</h3>";
+                echo "a. Quantidade de produtos com preço inferior a R$50,00: $quantidade_preco_inferior_50<br>";
+                echo "b. Nome dos produtos com preço entre R$50,00 e R$100,00: ";
+                if (!empty($nomes_preco_entre_50_e_100)) {
+                    echo implode(', ', $nomes_preco_entre_50_e_100) . "<br>";
+                } else {
+                    echo "Nenhum produto encontrado nessa faixa de preço.<br>";
+                }
+                echo "c. Média dos preços dos produtos com preço superior a R$100,00: R$ " . number_format($media_precos_superior_100, 2);
+            }
+        ?>
 </body>
 </html>
